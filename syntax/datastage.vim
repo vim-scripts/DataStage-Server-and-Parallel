@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	DataStage (Server & Parallel)
 " Maintainer:	Lubomir Husar
-" Last Change:	2008-02-21
+" Last Change:	2008-02-25
 "
 " This file supports the DataStage Basic (you need unibasic.vim have placed in
 " vim syntax folder), DSX syntax " and parallel (PX) syntax
@@ -45,6 +45,7 @@ syn match  UBspecial         "DSU\."
 syn match  UBspecial         "DSX\."
 
 "Parallel (PX) 
+"Transformer
 "Datetime functions
 syn keyword PXFunction DateFromDaysSince
 syn keyword PXFunction DateFromJulianDay
@@ -184,6 +185,27 @@ syn keyword PXFunction AsInteger
 
 "Utility function
 syn keyword PXFunction GetEnvironment
+
+"Modify stage functions
+syn keyword PXFunction date_from_ustring
+syn keyword PXFunction ustring_from_date
+syn keyword PXFunction ustring_from_time
+syn keyword PXFunction time_from_ustring
+syn keyword PXFunction ustring_from_timestamp
+syn keyword PXFunction timestamp_from_ustring
+syn keyword PXFunction ustring_from_decimal
+syn keyword PXFunction decimal_from_ustring
+syn keyword PXFunction uppercase_ustring
+syn keyword PXFunction ustring_length
+syn keyword PXFunction u_substring
+syn keyword PXFunction ustring_length
+syn keyword PXFunction is_ustring_inband_null
+syn keyword PXFunction handle_null
+syn keyword PXFunction make_null
+syn keyword PXFunction lookup_int_16_from_ustring
+syn keyword PXFunction lookup_ustring_from_int16
+syn keyword PXFunction lookup_ustring_from_uint32
+syn keyword PXFunction lookup_uint32_from_ustring
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
